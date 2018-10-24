@@ -1,8 +1,9 @@
 # modelx
-# 基于falsk框架的python-web项目，实现实时模型计算，离线任务治理等。
+## 基于falsk框架的python-web项目，实现实时模型计算，离线任务治理等。
   部署：
     nginx+uwsgi
   nginx配置（测试）：
+    ```
     server {
         listen       8080;
         server_name  localhost;
@@ -19,7 +20,9 @@
             root   html;
         }
      }
+     ```
  uwsgi配置(测试)：
+      ```
       [uwsgi]
       home = /home/work/python3/
       pythonpath = /home/work/flask
@@ -38,3 +41,4 @@
       stats=%(chdir)/uwsgi.status
       pidfile=%(chdir)/uwsgi.pid
       daemonize=%(chdir)/uwsgi.log
+      ```
